@@ -13,23 +13,7 @@
 			<div class="">
 
 				<div>
-					<ul class="ull">
-						<h1>
-							<a href="/#/order" target="">
-								<i class="fas fa-plus-circle"></i>สั่งอาหาร </a>
-						</h1>
-						<li class="">
-							<h2>List Order</h2>
-						</li>
-						<li v-for="customer in customer" v-bind:key="customer.id">
-
-							<div class="c0">
-
-								ผู้สั่ง : {{customer.customer}} <br/> อาหาร : {{customer.name}} <br/> {{customer.ea}} จำนวน
-								<hr class="hrr" />
-							</div>
-						</li><br />
-					</ul>
+					<center> <img src=".././assets/kuma.png" alt="HTML5 Icon" style="width:700px;height:700px;"> </center><br />
 				</div>
 
 			</div>
@@ -180,7 +164,9 @@ li a:hover:not(.active) {
 }
 
 .btnLogout {
-	/* color: rgb(55, 123, 52); */
+	color: #47525e;
+	font-weight: bold;
+	background-color: #cfeeff;
 	font-size: 18px;
 	width: auto !important;
 	height: 40px;
@@ -195,8 +181,8 @@ li a:hover:not(.active) {
 }
 
 .btnLogout:hover {
-	color: #fff;
-	background-color: #4caf50;
+	color: #47525e;
+	background-color: #cfeeff;
 }
 .btn-header {
 	flex-direction: row-reverse;

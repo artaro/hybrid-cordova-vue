@@ -3,53 +3,77 @@
 
 	<div class="hello">
 		<div class="title">
-			<div> - </div>{{ msg }}</div>
 
+			<div class="d-flex btn-header row">
+
+				<div class="col-4 arrow" v-on:click="home">
+					<i class="fas fa-arrow-left"></i>
+				</div>
+
+				<div class="col-4"> {{ msg }}</div>
+				<div class="col-4">
+					<button v-on:click="logout" class="btnLogout">Logout</button>
+				</div>
+
+			</div>
+		</div>
 
 		<div class="d-flex eachProfile">
 			<div>
-				<center> <img src=".././assets/logo.png" alt="HTML5 Icon" style="width:150px;height:150px;border-radius:50px"> </center><br />
+				<center> <img src=".././assets/napat.jpg" alt="HTML5 Icon" style="width:150px;height:150px;"> </center><br />
 			</div>
 			<div class="ml-5">
 				<h5>
 					<b>Napat Binsa-ard</b> <br />5835512007 <br />Computer Engineering <br />
-					<i class="fab fa-facebook-square fa-2x" style="color:#42b983"></i>
+					<i class="fab fa-facebook-square fa-1x" style="color:#42b983"></i>
 					<a href="https://www.facebook.com/newnapat17">Facebook</a> <br />
-					<i class="fas fa-phone-square fa-2x" style="color:#42b983"></i>Tel : 0836534304 <br />
-					<i class="far fa-envelope fa-2x" style="color:#42b983"></i>E-mail : naphat1811@gmail.com <br /></h5>
-			</div>
-		</div>
-
-
-		<div class="d-flex eachProfile">
-			<div>
-				<center> <img src=".././assets/pumin.jpg" alt="HTML5 Icon" style="width:160px;height:180px;"> </center><br />
-			</div>
-			<div class="ml-5">
-				<h5>
-					<b>Pumin Swangjang</b> <br />5835512102 <br />Computer Engineering <br />
-					<i class="fab fa-facebook-square fa-2x" style="color:#42b983"></i>
-					<a href="https://www.facebook.com/boy.reallife">Facebook</a> <br />
-					<i class="fas fa-phone-square fa-2x" style="color:#42b983"></i>Tel : 0831760760 <br />
-					<i class="far fa-envelope fa-2x" style="color:#42b983"></i>E-mail : realxiz.zixlaer@hotmail.com <br /></h5>
+					<i class="fas fa-phone-square fa-1x" style="color:#42b983"></i> Tel : 0836534304 <br />
+					<i class="far fa-envelope fa-1x" style="color:#42b983"></i> E-mail : naphat1811@gmail.com <br /></h5>
 			</div>
 		</div>
 
 		<div class="d-flex eachProfile">
 			<div>
-				<center> <img src=".././assets/logo.png" alt="HTML5 Icon" style="width:150px;height:150px;border-radius:50px"> </center><br />
+				<center> <img src=".././assets/gap.jpg" alt="HTML5 Icon" style="width:160px;height:180px;"> </center><br />
+			</div>
+			<div class="ml-5">
+				<h5>
+					<b>Naruenat Khunatham</b> <br />5835512010 <br />Computer Engineering <br />
+					<i class="fab fa-facebook-square fa-1x" style="color:#42b983"></i>
+					<a href="https://www.facebook.com/narunart.kunatham">Facebook</a> <br />
+					<i class="fas fa-phone-square fa-1x" style="color:#42b983"></i> Tel : 081-4061860 <br />
+					<i class="far fa-envelope fa-1x" style="color:#42b983"></i> E-mail : kap7059678@gmail.com <br /></h5>
+			</div>
+		</div>
+
+		<div class="d-flex eachProfile">
+			<div>
+				<center> <img src=".././assets/gram.jpg" alt="HTML5 Icon" style="width:150px;height:150px;"> </center><br />
 			</div>
 			<div class="ml-5">
 				<h5>
 
+					<b>Anongnat Faikhao</b> <br />5835512036 <br />Computer Engineering <br />
+					<i class="fab fa-facebook-square fa-1x" style="color:#42b983"></i>
+					<a href="https://www.facebook.com/gramma.nano">Facebook</a> <br />
+					<i class="fas fa-phone-square fa-1x" style="color:#42b983"></i> Tel : 087-4638443 <br />
+					<i class="far fa-envelope fa-1x" style="color:#42b983"></i> E-mail : hle_gam@hotmail.com <br /></h5>
+			</div>
+		</div>
+
+		<div class="d-flex eachProfile">
+			<div>
+				<center> <img src=".././assets/bus.jpg" alt="HTML5 Icon" style="width:160px;height:180px;"> </center><br />
+			</div>
+			<div class="ml-5">
+				<h5>
 					<b>Busarin Kaewsalam</b> <br />5835512051 <br />Computer Engineering <br />
-					<i class="fab fa-facebook-square fa-2x" style="color:#42b983"></i>
+					<i class="fab fa-facebook-square fa-1x" style="color:#42b983"></i>
 					<a href="https://www.facebook.com/yb3buss">Facebook</a> <br />
-					<i class="fas fa-phone-square fa-2x" style="color:#42b983"></i>Tel : 0917542311 <br />
-					<i class="far fa-envelope fa-2x" style="color:#42b983"></i>E-mail : yb3buss@gmail.com <br /></h5>
+					<i class="fas fa-phone-square fa-1x" style="color:#42b983"></i> Tel : 0917542311 <br />
+					<i class="far fa-envelope fa-1x" style="color:#42b983"></i> E-mail : yb3buss@gmail.com <br /></h5>
 			</div>
 		</div>
-
 
 		<div class="d-flex eachProfile">
 			<div>
@@ -58,53 +82,28 @@
 			<div class="ml-5">
 				<h5>
 					<b>Pumin Swangjang</b> <br />5835512102 <br />Computer Engineering <br />
-					<i class="fab fa-facebook-square fa-2x" style="color:#42b983"></i>
+					<i class="fab fa-facebook-square fa-1x" style="color:#42b983"></i>
 					<a href="https://www.facebook.com/boy.reallife">Facebook</a> <br />
-					<i class="fas fa-phone-square fa-2x" style="color:#42b983"></i>Tel : 0831760760 <br />
-					<i class="far fa-envelope fa-2x" style="color:#42b983"></i>E-mail : realxiz.zixlaer@hotmail.com <br /></h5>
+					<i class="fas fa-phone-square fa-1x" style="color:#42b983"></i> Tel : 0831760760 <br />
+					<i class="far fa-envelope fa-1x" style="color:#42b983"></i> E-mail : realxiz.zixlaer@hotmail.com <br /></h5>
 			</div>
 		</div>
-
 
 		<div class="d-flex eachProfile">
 			<div>
-				<center> <img src=".././assets/pumin.jpg" alt="HTML5 Icon" style="width:160px;height:180px;"> </center><br />
+				<center> <img src=".././assets/art.jpg" alt="HTML5 Icon" style="width:160px;height:180px;"> </center><br />
 			</div>
 			<div class="ml-5">
 				<h5>
-					<b>Pumin Swangjang</b> <br />5835512102 <br />Computer Engineering <br />
-					<i class="fab fa-facebook-square fa-2x" style="color:#42b983"></i>
-					<a href="https://www.facebook.com/boy.reallife">Facebook</a> <br />
-					<i class="fas fa-phone-square fa-2x" style="color:#42b983"></i>Tel : 0831760760 <br />
-					<i class="far fa-envelope fa-2x" style="color:#42b983"></i>E-mail : realxiz.zixlaer@hotmail.com <br /></h5>
+					<b>Tossapol Jaidee</b> <br />5835512102 <br />Computer Engineering <br />
+					<i class="fab fa-facebook-square fa-1x" style="color:#42b983"></i>
+					<a href="https://www.facebook.com/j.tossapol">Facebook</a> <br />
+					<i class="fas fa-phone-square fa-1x" style="color:#42b983"></i> Tel : 087-3860824 <br />
+					<i class="far fa-envelope fa-1x" style="color:#42b983"></i> E-mail : invisibleart.t@gmail.com <br /></h5>
 			</div>
 		</div>
 
-
-		<div class="d-flex eachProfile">
-			<div>
-				<center> <img src=".././assets/pumin.jpg" alt="HTML5 Icon" style="width:160px;height:180px;"> </center><br />
-			</div>
-			<div class="ml-5">
-				<h5>
-					<b>Pumin Swangjang</b> <br />5835512102 <br />Computer Engineering <br />
-					<i class="fab fa-facebook-square fa-2x" style="color:#42b983"></i>
-					<a href="https://www.facebook.com/boy.reallife">Facebook</a> <br />
-					<i class="fas fa-phone-square fa-2x" style="color:#42b983"></i>Tel : 0831760760 <br />
-					<i class="far fa-envelope fa-2x" style="color:#42b983"></i>E-mail : realxiz.zixlaer@hotmail.com <br /></h5>
-			</div>
-		</div>
-
-
-		<h2>
-			<a href="/#/hello" target="">
-				<i class="fas fa-home"></i> กลับสู่หน้าหลัก</a><br/>
-			<button v-on:click="logout" class="btnLogout">Logout</button>
-		</h2>
 	</div>
-
-
-	
 
 </template> 
 
@@ -132,6 +131,9 @@ export default {
 				.then(() => {
 					this.$router.replace('login')
 				})
+		},
+		home: function() {
+			this.$router.replace('home')
 		}
 	}
 }
@@ -177,21 +179,28 @@ a {
 }
 
 .btnLogout {
-	color: rgb(55, 123, 52);
+	color: #47525e;
 	font-size: 18px;
-	width: 250px !important;
+	width: auto !important;
 	height: 40px;
-	border-radius: 20px !important;
-	border: 0.5px solid rgb(82, 212, 74);
+	font-weight: bold;
+	border-radius: 15px !important;
+	/* border: 0.5px solid; */
 	padding: 4px 0px 4px 0px;
-	box-shadow: rgb(75, 197, 96) 3px 3px 10px -3px;
+	/* box-shadow: rgb(75, 197, 96) 3px 3px 10px -3px; */
 	outline-width: 0px;
 	cursor: pointer;
-	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	background-color: #cfeeff;
 }
 
 .btnLogout:hover {
-	color: #fff;
-	background-color: #4caf50;
+	color: #47525e;
+	background-color: #cfeeff;
+}
+.arrow {
+	cursor: pointer;
+	color: gray;
 }
 </style>
