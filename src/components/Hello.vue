@@ -2,12 +2,15 @@
 <template>
 
 	<div class="hello">
+		<div class="d-flex btn-header">
+			<button v-on:click="logout" class="btnLogout">Logout</button>
+			<button v-on:click="dev" class="btnLogout">Developer</button>
 
-		<h2>{{ msg }} {{currentUser}}</h2>
-
+		</div>
+		<!-- <h2>{{ msg }} {{currentUser}}</h2> -->
 		<div id="new-employee">
 
-			<div class="row">
+			<div class="">
 
 				<div>
 					<ul class="ull">
@@ -32,12 +35,6 @@
 			</div>
 		</div>
 
-		<h2>
-			<a href="/#/profile" target="">
-				<i class="fas fa-users"></i><br />ไปหน้าผู้จัดทำ</a>
-		</h2>
-
-		<button v-on:click="logout" class="btnLogout">Logout</button>
 	</div>
 </template>
 
@@ -110,6 +107,9 @@ export default {
 				.then(() => {
 					this.$router.replace('login')
 				})
+		},
+		dev: function() {
+			this.$router.replace('profile')
 		}
 	}
 }
@@ -180,21 +180,25 @@ li a:hover:not(.active) {
 }
 
 .btnLogout {
-	color: rgb(55, 123, 52);
+	/* color: rgb(55, 123, 52); */
 	font-size: 18px;
-	width: 250px !important;
+	width: auto !important;
 	height: 40px;
-	border-radius: 20px !important;
-	border: 0.5px solid rgb(82, 212, 74);
+	border-radius: 15px !important;
+	/* border: 0.5px solid; */
 	padding: 4px 0px 4px 0px;
-	box-shadow: rgb(75, 197, 96) 3px 3px 10px -3px;
+	/* box-shadow: rgb(75, 197, 96) 3px 3px 10px -3px; */
 	outline-width: 0px;
 	cursor: pointer;
 	margin-bottom: 20px;
+	margin-right: 20px;
 }
 
 .btnLogout:hover {
 	color: #fff;
 	background-color: #4caf50;
+}
+.btn-header {
+	flex-direction: row-reverse;
 }
 </style>

@@ -1,40 +1,51 @@
 <template>
 	<div class="login">
-		<!-- <img src=".././assets/logoFood.png" style="width:300px;height:300px;"> -->
-		<h3>Sign In</h3>
+		<img src=".././assets/logoballoon.png" style="width:300px;height:300px;">
+		<h3 class="logo">Toon Toon</h3>
 		<input style="	
     color: rgb(55, 123, 52);
     font-size: 18px;
     width: 250px !important;
     height: 40px;
-    border-radius: 20px !important;
+    <!-- border-radius: 20px !important; -->
     border: 0.5px solid rgb(82, 212, 74);
     padding: 4px 0px 4px 19px;
-    box-shadow: rgb(75, 197, 96) 3px 3px 10px -3px;
+    <!-- box-shadow: rgb(75, 197, 96) 3px 3px 10px -3px; -->
     outline-width: 0px;" type="text" v-model="email" placeholder="Email"><br>
 		<input style="	
 color: rgb(55, 123, 52);
     font-size: 18px;
     width: 250px !important;
     height: 40px;
-    border-radius: 20px !important;
+    <!-- border-radius: 20px !important; -->
     border: 0.5px solid rgb(82, 212, 74);
     padding: 4px 0px 4px 19px;
-    box-shadow: rgb(75, 197, 96) 3px 3px 10px -3px;
+    <!-- box-shadow: rgb(75, 197, 96) 3px 3px 10px -3px; -->
     outline-width: 0px; " type="password" v-model="password" placeholder="Password"><br>
 		<button style="	font-size: 18px;
 	width: 270px !important;
 	height: 49px;
-	border-radius: 20px !important;
+	<!-- border-radius: 20px !important; -->
 	border: 0.5px solid rgb(76, 171, 71);
 	padding: 4px 0px 4px 0px;
 	box-shadow: 3px 3px 10px -3px #cacaca;
   outline-width: 0px;
-  background-color: rgb(76, 171, 71);
+  background-color: orange;
   color: #fff;
-  " v-on:click="signIn">Connection</button>
-		<h4>You don't have an account ? You can
-			<router-link to="/sign-up">Sign Up</router-link>
+  " v-on:click="signIn">Sign in</button><br>
+	<button style="	font-size: 18px;
+	width: 270px !important;
+	height: 49px;
+	<!-- border-radius: 20px !important; -->
+	border: 0.5px solid rgb(76, 171, 71);
+	padding: 4px 0px 4px 0px;
+	box-shadow: 3px 3px 10px -3px #cacaca;
+  outline-width: 0px;
+  background-color: brown;
+  color: #fff;
+  " v-on:click="signUp">Sign up</button>
+		<h4>Forgot Password
+			<!-- <router-link to="/sign-up">Sign Up</router-link> -->
 		</h4>
 	</div>
 </template>
@@ -63,7 +74,11 @@ export default {
 						alert('Oops. ' + err.message)
 					}
 				)
+		},
+		signUp:function () {
+			this.$router.replace('sign-up')
 		}
+		
 	}
 }
 </script>
@@ -91,5 +106,8 @@ p {
 p a {
 	text-decoration: underline;
 	cursor: pointer;
+}
+.logo{
+	color: orange;
 }
 </style>

@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta http-equiv=”Content-Security-Policy” content=”default-src ‘self’ data:
-    gap: https://ssl.gstatic.com ‘unsafe-eval’; style-src ‘self’
-    ‘unsafe-inline’; media-src *; img-src ‘self’ data: content:; connect-src
-    ‘self’ ws:;” />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta http-equiv=”Content-Security-Policy” content=”default-src ‘self’ data: gap: https://ssl.gstatic.com ‘unsafe-eval’; style-src
+    ‘self’ ‘unsafe-inline’; media-src *; img-src ‘self’ data: content:; connect-src ‘self’ ws:;” />
     <title>hybrid-webapp</title>
   </head>
-  <body>
+  <style>
+  .bg{
+    background-color: #ffe693;
+  }
+  </style>
+  <body class="bg">
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>
+
