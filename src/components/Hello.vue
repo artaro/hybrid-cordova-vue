@@ -226,7 +226,7 @@ li a:hover:not(.active) {
 }
 
 .btnLogout {
-	color: #47525e;
+	color: #ffa936;
 	font-weight: bold;
 	background-color: #cfeeff;
 	font-size: 18px;
@@ -234,7 +234,7 @@ li a:hover:not(.active) {
 	height: 40px;
 	border-radius: 15px !important;
 	/* border: 0.5px solid; */
-	padding: 4px 0px 4px 0px;
+	padding: 4px 4px 4px 4px;
 	/* box-shadow: rgb(75, 197, 96) 3px 3px 10px -3px; */
 	outline-width: 0px;
 	cursor: pointer;
@@ -243,8 +243,8 @@ li a:hover:not(.active) {
 }
 
 .btnLogout:hover {
-	color: #47525e;
-	background-color: #cfeeff;
+	color: #cfeeff;
+	background-color: #ffa936;
 }
 .btn-header {
 	flex-direction: row-reverse;

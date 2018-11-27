@@ -178,26 +178,27 @@ a {
 	border-radius: 15px; */
 }
 
+
 .btnLogout {
-	color: #47525e;
+	color: #ffa936;
+	font-weight: bold;
+	background-color: #cfeeff;
 	font-size: 18px;
 	width: auto !important;
 	height: 40px;
-	font-weight: bold;
 	border-radius: 15px !important;
 	/* border: 0.5px solid; */
-	padding: 4px 0px 4px 0px;
+	padding: 4px 4px 4px 4px;
 	/* box-shadow: rgb(75, 197, 96) 3px 3px 10px -3px; */
 	outline-width: 0px;
 	cursor: pointer;
 	margin-bottom: 20px;
 	margin-right: 20px;
-	background-color: #cfeeff;
 }
 
 .btnLogout:hover {
-	color: #47525e;
-	background-color: #cfeeff;
+	color: #cfeeff;
+	background-color: #ffa936;
 }
 .arrow {
 	cursor: pointer;
