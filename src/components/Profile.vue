@@ -1,7 +1,7 @@
 
 <template>
 
-	<div class="hello">
+	<div class="hello container">
 		<div class="title">
 
 			<div class="d-flex btn-header row">
