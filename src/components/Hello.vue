@@ -8,7 +8,7 @@
 
 		</div>
 		<h2>{{ msg }}</h2>
-		<div id="new-employee">
+		<div id="new-employee" class="container">
 
 			<div class="d-flex eachProfile row-12">
 				<div>
