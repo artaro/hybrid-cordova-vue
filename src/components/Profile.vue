@@ -6,14 +6,15 @@
 
 			<b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-			<b-navbar-brand href="http://localhost:8081/#/hello"><div class="logo">Anime</div></b-navbar-brand>
+
+			<b-navbar-brand><div class="logo" v-on:click="home">Anime</div></b-navbar-brand>
 
 			<b-collapse is-nav id="nav_collapse">
 
 				<b-navbar-nav>
-					<b-nav-item  href="http://localhost:8081/#/hello"><div class="headerfont">Home</div></b-nav-item>
-						<b-nav-item active href="http://localhost:8081/#/profile"><div class="font-bold">Developer</div></b-nav-item>
-
+					<b-nav-item v-on:click="home" ><div class="headerfont">Home</div></b-nav-item>
+				
+						<b-nav-item active v-on:click="dev"><div class="font-bold" >Developer</div></b-nav-item>
 				</b-navbar-nav>
 
 				<!-- Right aligned nav items -->
@@ -164,6 +165,9 @@ export default {
 		},
 		home: function() {
 			this.$router.replace('home')
+		},
+		dev:function () {
+			this.$router.replace('dev')
 		}
 	}
 }
@@ -172,7 +176,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .header{
-	color:#fffff !important;
+	color:#fff !important;
 	font-weight: bold;
 }
 

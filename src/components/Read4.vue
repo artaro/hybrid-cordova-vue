@@ -12,7 +12,7 @@
 
 				<b-navbar-nav>
 					<b-nav-item  href="http://localhost:8081/#/hello"><div class="headerfont">Home</div></b-nav-item>
-						<b-nav-item active href="http://localhost:8081/#/profile"><div class="font-bold">Developer</div></b-nav-item>
+						<b-nav-item active href="http://localhost:8081/#/profile"><div class="headerfont">Developer</div></b-nav-item>
 
 				</b-navbar-nav>
 

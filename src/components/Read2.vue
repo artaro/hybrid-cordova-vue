@@ -16,7 +16,7 @@
 						<div class="headerfont">Home</div>
 					</b-nav-item>
 					<b-nav-item active href="http://localhost:8081/#/profile">
-						<div class="font-bold">Developer</div>
+						<div class="headerfont">Developer</div>
 					</b-nav-item>
 
 				</b-navbar-nav>

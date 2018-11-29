@@ -6,13 +6,13 @@
 
 			<b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-			<b-navbar-brand href="http://localhost:8081/#/hello"><div class="logo">Anime</div></b-navbar-brand>
+			<b-navbar-brand><div class="logo" v-on:click="home">Anime</div></b-navbar-brand>
 
 			<b-collapse is-nav id="nav_collapse">
 
 				<b-navbar-nav>
-					<b-nav-item active href="http://localhost:8081/#/hello"><div class="font-bold">Home</div></b-nav-item>
-						<b-nav-item href="http://localhost:8081/#/profile"><div class="headerfont">Developer</div></b-nav-item>
+					<b-nav-item active ><div class="font-bold" v-on:click="home">Home</div></b-nav-item>
+						<b-nav-item ><div class="headerfont" v-on:click="dev">Developer</div></b-nav-item>
 
 				</b-navbar-nav>
 
@@ -52,7 +52,7 @@
           style="max-width: 20rem;"
           class="mb-2 mr-2">
    <div>
-    <b-button href="http://localhost:8081/#/read1" variant="dark">อ่านต่อ ...</b-button></div>
+    <b-button  v-on:click="read1"  variant="dark">อ่านต่อ ...</b-button></div>
   </b-card>
 </div>
 
@@ -66,7 +66,7 @@
           style="max-width: 20rem;"
           class="mb-2 mr-2">
   
-    <b-button href="http://localhost:8081/#/read2" variant="dark">อ่านต่อ ...</b-button>
+    <b-button  v-on:click="read2"  variant="dark">อ่านต่อ ...</b-button>
   </b-card>
 	</div>
 
@@ -80,7 +80,7 @@
           style="max-width: 20rem;"
           class="mb-2 mr-2">
   
-    <b-button href="http://localhost:8081/#/read3" variant="dark">อ่านต่อ ...</b-button>
+    <b-button  v-on:click="read3"  variant="dark">อ่านต่อ ...</b-button>
   </b-card>
 	</div>
 
@@ -93,7 +93,7 @@
           style="max-width: 20rem;"
           class="mb-2">
 
-    <b-button href="http://localhost:8081/#/read4" variant="dark">อ่านต่อ ...</b-button>
+    <b-button  v-on:click="read4"  variant="dark">อ่านต่อ ...</b-button>
   </b-card>
 </div>
 
@@ -186,9 +186,25 @@ export default {
 				.then(() => {
 					this.$router.replace('login')
 				})
+		},	
+		read1: function() {
+			this.$router.replace('read1')
+		},
+		read2: function() {
+			this.$router.replace('read2')
+		},
+		read3: function() {
+			this.$router.replace('read3')
+		},
+		read4: function() {
+			this.$router.replace('read4')
 		},
 		dev: function() {
 			this.$router.replace('profile')
+		},
+		home: function () {
+			this.$router.replace('home')
+			
 		}
 	}
 }
