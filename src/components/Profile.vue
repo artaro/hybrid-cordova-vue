@@ -1,23 +1,45 @@
 
 <template>
+<div>
 
+		<b-navbar toggleable="md" type="dark" variant="warning" >
+
+			<b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+
+			<b-navbar-brand href="http://localhost:8081/#/hello"><div class="logo">Anime</div></b-navbar-brand>
+
+			<b-collapse is-nav id="nav_collapse">
+
+				<b-navbar-nav>
+					<b-nav-item  href="http://localhost:8081/#/hello"><div class="headerfont">Home</div></b-nav-item>
+						<b-nav-item active href="http://localhost:8081/#/profile"><div class="font-bold">Developer</div></b-nav-item>
+
+				</b-navbar-nav>
+
+				<!-- Right aligned nav items -->
+				<b-navbar-nav class="ml-auto">
+
+					<b-nav-form>
+						<b-form-input size="sm" class="mr-sm-2" type="text" placeholder="Search" />
+						<b-button size="sm" class="my-2 my-sm-0 mr-2" type="submit">Search</b-button>
+						<b-button v-on:click="logout" size="sm" class="my-2 my-sm-0" type="submit">Log out</b-button>
+					</b-nav-form>
+
+				</b-navbar-nav>
+
+			</b-collapse>
+		</b-navbar>
 	<div class="container">
+		
 
-		<div class="d-flex">
 
-			<div class="col-4 arrow" v-on:click="home">
-				<i class="fas fa-arrow-left"></i>
-			</div>
 
-			<div class="col-4"> {{ msg }}</div>
-			<div class="col-4">
-				<button v-on:click="logout" class="btnLogout">Logout</button>
-			</div>
-
-		</div>
-
+		
+		
+<div class="row logo mt-5"><div class="col-12">Team</div></div>
 		<div class="row">
 			<div class="d-flex eachProfile col-12 cen">
+
 				<div class="p-2">
 					<center> <img src=".././assets/napat.jpg" alt="HTML5 Icon" style="width:150px;height:150px;"> </center><br />
 				</div>
@@ -109,7 +131,8 @@
 				</div>
 			</div>
 		</div>
-
+	</div>
+<div class="footer pt-3 pb-3 mt-4">Copyright © 2009-2018 Anime WebApp. All Rights Reserved.</div>
 	</div>
 
 </template> 
@@ -148,14 +171,39 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.header{
+	color:#fffff !important;
+	font-weight: bold;
+}
+
+.font-bold{
+		font-weight: bold;
+}
+
+active{
+	font-weight: bold;
+}
+
+.headerfont{
+color:#fff;
+}
+.logo{
+	color: black !important;
+font-weight: bold;
+font-size:25px;
+}
 h1,
 h2 {
 	font-weight: normal;
 	margin-left: 80px;
 	text-align: center;
 }
+.footer{
+	background: #ffc107 !important;
+	color:#fff;
+}
 
-ul {
+/* ul {
 	list-style-type: none;
 	padding: 0;
 }
@@ -167,7 +215,7 @@ li {
 
 a {
 	color: #42b983;
-}
+} */
 
 .title {
 	font-size: 30px;

@@ -21,6 +21,11 @@ import Login from '@/components/Login'
 import SignUp from '@/components/SignUp'
 import Profile from '@/components/Profile'
 import Order from '@/components/Order'
+import Read1 from '@/components/Read1'
+import Read2 from '@/components/Read2'
+import Read3 from '@/components/Read3'
+import Read4 from '@/components/Read4'
+
 import firebase from 'firebase'
 
 Vue.use(Router)
@@ -57,6 +62,38 @@ let router = new Router({
       path: '/profile',
       name: 'Profile',
       component: Profile,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/read1',
+      name: 'Read1',
+      component:Read1,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    
+    {
+      path: '/read2',
+      name: 'Read2',
+      component: Read2,
+      meta: {
+        requiresAuth: true
+      }
+    },  {
+      path: '/read3',
+      name: 'Read2',
+      component: Read3,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/read4',
+      name: 'Read4',
+      component: Read4,
       meta: {
         requiresAuth: true
       }

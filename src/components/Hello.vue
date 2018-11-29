@@ -2,98 +2,131 @@
 <template>
 
 	<div class="hello">
-		<div class="d-flex btn-header">
-			<button v-on:click="logout" class="btnLogout">Logout</button>
-			<button v-on:click="dev" class="btnLogout">Developer</button>
+		<b-navbar toggleable="md" type="dark" variant="warning" >
 
+			<b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+
+			<b-navbar-brand href="http://localhost:8081/#/hello"><div class="logo">Anime</div></b-navbar-brand>
+
+			<b-collapse is-nav id="nav_collapse">
+
+				<b-navbar-nav>
+					<b-nav-item active href="http://localhost:8081/#/hello"><div class="font-bold">Home</div></b-nav-item>
+						<b-nav-item href="http://localhost:8081/#/profile"><div class="headerfont">Developer</div></b-nav-item>
+
+				</b-navbar-nav>
+
+				<!-- Right aligned nav items -->
+				<b-navbar-nav class="ml-auto">
+
+					<b-nav-form>
+						<b-form-input size="sm" class="mr-sm-2" type="text" placeholder="Search" />
+						<b-button size="sm" class="my-2 my-sm-0 mr-2" type="submit">Search</b-button>
+						<b-button v-on:click="logout" size="sm" class="my-2 my-sm-0" type="submit">Log out</b-button>
+					</b-nav-form>
+
+				</b-navbar-nav>
+
+			</b-collapse>
+		</b-navbar>
+
+		<div>
+			<b-carousel id="carousel1" style="text-shadow: 1px 1px 2px #333;" controls indicators background="#ababab" :interval="4000" img-width="500" img-height="160" v-model="slide" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
+<b-carousel-slide caption="Boruto: Naruto Next Generations" text="" img-src="https://images4.alphacoders.com/737/737895.png" class="img-fluid" ></b-carousel-slide>
+<b-carousel-slide caption="One Punch Man" text="" img-src="https://www.ps4wallpapers.com/wp-content/uploads/2017/03/PS4Wallpapers.com_big_f6e38856e3f4fd3b8b2a48062e3d451b67c0ad91.jpg" class="img-fluid"></b-carousel-slide>
+			</b-carousel>
 		</div>
-		<h2>{{ msg }}</h2>
-		<div id="new-employee" class="container">
 
-			<div class="d-flex eachProfile">
 
-				<div class="col-12">
 
-					<div>
-						<center> <img src="https://www.nerdlog.it/wp-content/uploads/2017/12/Overlord-2-post.jpg" class="mt-2" alt="HTML5 Icon" style="width:200px;height:220px;"> </center><br />
-					</div>
-					<div class="ml-5">
-						<h5>
-							<b>อันดับที่ 5</b> <br />Overlord II <br />เริ่ม: 9 ม.ค. 18–20.30 (TH)<br /> จำนวน: 13 ตอน<br/> ผลิต: Madhouse<br/><br/>เรื่องย่อ: ในปี 2126 เกม Dive Massively Multiplayer Online Role Playing Game (DMMORPG) ที่ชื่อ “Yggdrasil” ได้รับความนิยม ผ่านไป 12 ปีตัวเกมได้ปิดตัวลง กิลด์ Ainz Ooal Gown ได้ที่เคยยิ่งใหญ่ได้ถอนตัวก่อนเกมปิด เหลือเพียง Momonga ที่รับตำแหน่งหัวหน้า ยังคงอยู่ในเกมที่ฐานของกิลด์ซึ่งเป็นสุสานขนาดใหญ่ จนวันที่เกมปิดตัวลง เขาพร้อมกลับไปใช้ชีวิตในโลกความเป็นจริง แต่หลังเซิร์ฟเวอร์ปิดเขากลับพบว่าตนได้ย้ายไปในสถานที่อื่น และ NPC รับใช้กิลด์ได้มีชีวิต เขาจึงตั้งใจใช้ชีวิตใหม่ ในโลกใบใหม่ และค้นหาเหตุผลที่เขาถูกส่งมาที่นี่
-						</h5>
-					</div>
-				</div>
-			</div>
+		<div class="container mt-5">
 
-			<div class="d-flex eachProfile">
+			<div class="d-flex row allcard">
 
-				<div class="col-12">
-					<div>
-						<center> <img src="https://i.pinimg.com/originals/c7/76/f9/c776f9bdeb216c927348e88ec44da7a5.jpg" class="mt-2" alt="HTML5 Icon" style="width:200px;height:220px;"> </center><br />
-					</div>
-					<div class="ml-5">
-						<h5>
-							<b>อันดับที่ 4</b> <br />Gin no Guardian 2nd Season<br />เริ่ม: 13 ม.ค. 18–19.00 (TH)<br />จำนวน: 12 ตอน (อาจมี 6 ตอน)<br/>ผลิต: Haoliners Animation<br/><br/>เรื่องย่อ: (ภาคแรก) “ริคุ ซุยกิน” ชายที่ฐานะยากจน เขาได้รู้จัก “ริคุ เรย์” คุณหนูผู้ร่ำรวย ทั้งสองสนิทกันจากเกม จนเธอเสีย “ยูกิ” พ่อบุญธรรมจากการฆาตกรรม ทำให้เขาได้ทราบเรื่องที่เขาเป็นหลานแท้ ๆ ของยูกิที่ทิ้งมรดกและอุปกรณ์เข้าเกมใหม่ในโลกเสมือนจริง Grave Buster ไว้ให้ เรย์ถูกลักพาตัวจากชายที่ชื่อ “เทย์มุจิน” ที่ให้ซุยกินไปพบเขาในเกม เขาจึงต้องตามไปช่วยเธอในเกมที่มีการใช้เงินจริง เขาอยู่ฝ่ายผู้พิทักษ์สุสานที่แทบไม่เหลือใคร ต้องสู้กับเหล่านักล่าสุสาน ในฐานะหนึ่งผู้เล่นที่มีเงินในเกมเกินพันล้านเยน </h5>
-					</div>
-				</div>
+				<div class="eachCard">
+	  <b-card title="Ore to Kawazu san no Isekai Hourouki"
+          img-src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/46970630_1931341423620464_1962359768584552448_n.jpg?_nc_cat=107&_nc_ht=scontent.fbkk10-1.fna&oh=629d3d811615daceac0538c78c8319e1&oe=5C751EE4"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2 mr-2">
+   <div>
+    <b-button href="http://localhost:8081/#/read1" variant="dark">อ่านต่อ ...</b-button></div>
+  </b-card>
+</div>
 
-			</div>
-			<div class="d-flex eachProfile">
 
-				<div class="col-12">
-					<div>
-						<center> <img src="https://i.ytimg.com/vi/DZK0KdORw-c/maxresdefault.jpg" class="mt-2" alt="HTML5 Icon" style="width:200px;height:220px;"> </center><br />
-					</div>
-					<div class="ml-5">
-						<h5>
-							<b>อันดับที่ 3</b> <br />Boku no Hero Academia (Season 3)<br />เริ่ม: - <br /> จำนวน: - <br/> ผลิต: Bones<br/><br/>ยุคสมัยหนึ่ง ได้มีเด็กที่เกิดมาพร้อม อัตลักษณ์ (Kosei, Quirk) ที่ทำให้ใช้ความสามารถพิเศษได้และเพิ่มจำนวนขึ้น กว่า 80% มีอัตลักษณ์ตั้งแต่เกิด จนการมีพลังพิเศษกลายเป็นเรื่องปกติในชีวิตประจำวัน และจำเป็นต้องมีผู้ผดุงความยุติธรรมเพื่อป้องกันอาชญากรรมจากพวกผู้มีพลังพิเศษ เรื่องราวของ “มิโดริยะ อิซึคุ” (เดกุ) ที่เคยประทับใจกับฮีโร่ผู้ผดุงความยุติธรรมตั้งแต่เด็ก ฝันอยากช่วยคนอื่นแต่ก็สิ้นหวังกับการที่ตนกลายเป็นพวกไร้อัตลักษณ์ หลังได้ช่วยเพื่อนร่วมชั้น “ออลไมท์” ฮีโร่อันดับหนึ่ง แบ่งความสามารถเฉพาะที่สืบทอดมาให้กับเขา ส่งผลให้ เดกุ มีโอกาสมาเรียนในโรงเรียน ยูเอ ที่สอนเหล่าฮีโร่โดยเฉพาะ</h5>
-					</div>
-				</div>
+<div class="eachCard">
+	 <b-card title="The Promised Neverland"
+          img-src="https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/46967632_1931341480287125_8402532412822650880_n.jpg?_nc_cat=111&_nc_ht=scontent.fbkk14-1.fna&oh=1bfa1def1b3ddc60166a090d0fdc0d7b&oe=5C6A8E72"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2 mr-2">
+  
+    <b-button href="http://localhost:8081/#/read2" variant="dark">อ่านต่อ ...</b-button>
+  </b-card>
+	</div>
 
-			</div>
-			<div class="d-flex eachProfile">
 
-				<div class="col-12">
-					<div>
-						<center> <img src="https://i.ytimg.com/vi/_lGBF8fGC_M/maxresdefault.jpg" class="mt-2" alt="HTML5 Icon" style="width:200px;height:220px;"> </center><br />
-					</div>
-					<div class="ml-5">
-						<h5>
-							<b>อันดับที่ 2</b> <br />Nanatsu no Taizai: Imashime no Fukkatsu (Season 2)<br />เริ่ม: 13 ม.ค. 18–4.30 (TH)<br /> จำนวน: 24 ตอน<br/> ผลิต: A-1 Pictures<br/><br/>เรื่องย่อ: กลุ่มอัศวินแห่งบาปทั้ง 7 อดีตเหล่านักโทษผู้ก่อคดีและถูกตีตราสัญลักษณ์ของบาป 7 ประการบนร่าง วันหนึ่งพวกนั้นถูกกล่าวหาว่ากำลังวางแผนยึดครองอาณาจักร จึงถูกเนรเทศจากเมือง เวลาผ่านไป 10 ปี ได้เกิดการก่อรัฐประหารครั้งใหญ่ ราชาถูกจับกุมโดยกลุ่มอัศวินศักดิ์สิทธิ์ซึ่งเป็นพวกที่ใช้อำนาจข่มขู่ประชาชน “เจ้าหญิงอลิธซาเบธ” ได้ออกตามหากลุ่มอัศวินทั้ง 7 เพื่อขอความช่วยเหลือ เธอได้พบ “เมลิโอดาส” เจ้าของบาร์ Boar Hat แต่เขากลับเป็นหัวหน้าของเหล่าอัศวินแห่งบาป ผู้ที่มีสัญลักษณ์ของมังกรแห่งโทสะบนร่าง หลังจากได้เห็นความตั้งใจของอลิธซาเบธที่ต้องการช่วยบิดา เขาตัดสินใจที่จะออกตามหาเหล่าอัศวินแห่งบาปอีก 6 คนที่แยกย้ายกันไปเมื่อสิบปีก่อน หลังจบศึกใหญ่ในอาณาจักร “ลีโอเนส” ราชาได้เห็นภาพนิมิตรถึงหายนะที่กำลังจะเกิดในเมืองหลวงคาเมลอท พวกเมลิโอดาสออกเดินทางต่อพร้อมปัญหาใหม่ที่เกิดขึ้นในกลุ่มของเขา
+<div class="eachCard">
+	 <b-card title="One Punch Man Season 1"
+          img-src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/46983753_1931341396953800_3493328087041441792_n.jpg?_nc_cat=101&_nc_ht=scontent.fbkk10-1.fna&oh=b3111d9fc7dc33620e818c9dd7f053ce&oe=5C6366CB"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2 mr-2">
+  
+    <b-button href="http://localhost:8081/#/read3" variant="dark">อ่านต่อ ...</b-button>
+  </b-card>
+	</div>
 
-						</h5>
-					</div>
-				</div>
-			</div>
+<div class="eachCard">
+	 <b-card title="Boruto: Naruto Next Generations"
+          img-src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/47196434_1931341406953799_5557097694251450368_n.jpg?_nc_cat=103&_nc_ht=scontent.fbkk10-1.fna&oh=8162ed25231d02a9ea4d9c8f560c88a1&oe=5CA0A106"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2">
 
-			<div class="d-flex eachProfile">
+    <b-button href="http://localhost:8081/#/read4" variant="dark">อ่านต่อ ...</b-button>
+  </b-card>
+</div>
 
-				<div class="col-12">
-					<div>
-						<center> <img src="https://animeanime.jp/imgs/p/jtKDOVlKAvjRrNw8SXAVejagI61Nrq_oqaqr/125942.jpg" class="mt-2" alt="HTML5 Icon" style="width:200px;height:220px;"> </center><br />
-					</div>
-					<div class="ml-5">
-						<h5>
-							<b>อันดับที่ 1</b> <br />Yowamushi Pedal: Glory Line (Season 4)<br />เริ่ม: 9 ม.ค. 18–0.05 (TH)<br /> จำนวน: 25 ตอน<br/> ผลิต: TMS Entertainment<br/><br/>เรื่องย่อ: “โอโนดะ ซากามิจิ” นักเรียนหนุ่มปีหนึ่งขี่จักรยานไปแถวอากิบาฮาระบ่อยครั้งตั้งแต่เด็กด้วยจักรยานแม่บ้านธรรมดา ๆ ต้องขึ้นเขาและทางลาดชันไปกลับร่วม 90 กิโลเมตร กลายเป็นการฝึกฝนของเขาที่ไม่เคยรู้ตัวมาก่อน “อิมาอิซึมิ จุนสุเกะ” ที่ฝึกฝนเพื่อเป็นนักปั่นจักรยานมือโปร ได้สังเกตเห็นทักษะที่ไม่ธรรมดาและต้องการแข่งกับเขา ซึ่งทำให้เขาได้ก้าวสู่โลกของการแข่งขันจักรยาน ต่อเนื่องจากการแข่งวันแรกของอินเตอร์ไฮในอนิเมะซีซั่นสาม เกิดเหตุการณ์ไม่คาดฝันหลายอย่างที่เป็นอุปสรรคให้กับหลายโรงเรียน ช่วงท้ายของการแข่งระหว่างแต่ละโรงเรียนที่เข้มข้นกำลังจะถึงจุดไคล์แม็กซ์ </h5>
-					</div>
-				</div>
 
-			</div>
-		</div>
+
+</div>
+</div>
+<div class="footer pt-3 pb-3 mt-4">Copyright © 2009-2018 Anime WebApp. All Rights Reserved.</div>
+</div>
 
 	</div>
+	
 </template>
 
 <script>
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+Vue.use(BootstrapVue)
+import { Carousel } from 'bootstrap-vue/es/components'
+
+Vue.use(Carousel)
+
 import db from './firebaseInit'
 import firebase from 'firebase'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 export default {
 	name: 'new-customer',
 
 	// name: 'hello',
 	data() {
 		return {
-			msg: '10 อันดับ Anime ที่น่าสนใจในปี 2018 !!!',
+			msg: '5 อันดับ Anime ที่น่าสนใจในปี 2018 !!!',
 			customer: [],
 			loading: true
 		}
@@ -163,53 +196,66 @@ export default {
 
 
 <style scoped>
+.header{
+	color:#fffff !important;
+	font-weight: bold;
+}
+
+.font-bold{
+		font-weight: bold;
+}
+
+active{
+	font-weight: bold;
+}
+
+.headerfont{
+color:#fff;
+}
+.logo{
+	color: black !important;
+font-weight: bold;
+font-size:25px;
+}
+.eachCard{
+margin-bottom:20px;
+	width:270px !important;
+}
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+	height: 450px;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+	padding-top: 20px;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+
 h1,
 h2 {
 	font-weight: normal;
 }
-.ull {
-	display: grid;
-}
-ul {
-	list-style-type: none;
-	padding: 0;
-}
 
-li {
-	display: inline-block;
-	margin: 0 10px;
-}
-
-a {
-	color: #42b983;
-}
-ul {
-	/* list-style-type: none; */
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	/* background-color: #333; */
-}
-
-li {
-	float: left;
-}
-
-li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-li a:hover:not(.active) {
-	background-color: #111;
-}
-
-.active {
+/* .active {
 	background-color: #4caf50;
-}
+} 
 
 .hello {
 	text-align: center;
@@ -222,8 +268,7 @@ li a:hover:not(.active) {
 	width: auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	/* border: 1px solid #000; */
-}
+	/* border: 1px solid #000;} */
 
 .btnLogout {
 	color: #ffa936;
@@ -252,6 +297,7 @@ li a:hover:not(.active) {
 
 .eachProfile {
 	text-align: start;
+	/* background-color: #f0edc5;  */
 	/* justify-content: center; */
 	margin-top: 10px;
 	/* margin: 40px 40px 40px 100px;
@@ -260,4 +306,36 @@ li a:hover:not(.active) {
 	/* box-shadow: 3px 3px 10px -3px rgb(75, 197, 96) !important; */
 	border-radius: 15px;
 }
+
+.eachProfile:hover {
+	border: 1px solid #ffa936 !important;
+	box-shadow: 3px 3px 10px -3px #ffa936 !important;
+}
+.img-fluid{
+	    max-width: 100% !important;
+    max-height: 500px !important;
+}
+.img-fluid {
+    max-width: 100%;
+    max-height: 500px;
+}
+
+.card-img-top {
+    width: 100%;
+		height:270px;
+		}
+
+		.allcard{
+			height:100%;
+			margin:auto;
+	justify-content: center;
+		}
+.footer{
+	background: #ffc107 !important;
+	color:#fff;
+}
+.card{
+	height:100% !important;
+}
+
 </style>

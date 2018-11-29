@@ -1,6 +1,8 @@
 <template>
   <div class="sign-up">
     <!-- <img src=".././assets/logoFood.png" style="width:260px;height:260px;"> -->
+			<img src="https://forum.anime.lk/uploads/default/original/1X/5679c88da55ccddceec97cb840dc2f3f6864998f.png" style="width:400px;height:300px;">
+
     <p class="title">Let's create a new account !</p>
    	<input style="	
 color: #a7744d ;

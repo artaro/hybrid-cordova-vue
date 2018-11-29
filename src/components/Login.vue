@@ -1,7 +1,7 @@
 <template>
 	<div class="login">
-		<img src=".././assets/logoballoon.png" style="width:300px;height:300px;">
-		<h3 class="logo">Toon Toon</h3>
+		<img src="https://forum.anime.lk/uploads/default/original/1X/5679c88da55ccddceec97cb840dc2f3f6864998f.png" style="width:400px;height:300px;">
+
 		<div>
 			<div class="row d-flex inp">
 				<input style="	
@@ -49,7 +49,7 @@ color: #a7744d ;
 	padding: 4px 0px 4px 0px;
 	box-shadow: 3px 3px 10px -3px #cacaca;
   outline-width: 0px;
-  background-color: #a7744d;
+  background-color: #6c757d;
   color: #fff;
   " v-on:click="signUp">Sign up</button>
 		<h5 class="mt-4 gray">Forgot Password
