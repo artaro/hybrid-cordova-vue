@@ -1,18 +1,23 @@
-
 <template>
-<div>
+	<div>
 
-		<b-navbar toggleable="md" type="dark" variant="warning" >
+		<b-navbar toggleable="md" type="dark" variant="warning">
 
 			<b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-			<b-navbar-brand href="http://localhost:8081/#/hello"><div class="logo">Anime</div></b-navbar-brand>
+			<b-navbar-brand href="http://localhost:8081/#/hello">
+				<div class="logo">Anime</div>
+			</b-navbar-brand>
 
 			<b-collapse is-nav id="nav_collapse">
 
 				<b-navbar-nav>
-					<b-nav-item  href="http://localhost:8081/#/hello"><div class="headerfont">Home</div></b-nav-item>
-						<b-nav-item active href="http://localhost:8081/#/profile"><div class="font-bold">Developer</div></b-nav-item>
+					<b-nav-item href="http://localhost:8081/#/hello">
+						<div class="headerfont">Home</div>
+					</b-nav-item>
+					<b-nav-item active href="http://localhost:8081/#/profile">
+						<div class="font-bold">Developer</div>
+					</b-nav-item>
 
 				</b-navbar-nav>
 
@@ -29,31 +34,29 @@
 
 			</b-collapse>
 		</b-navbar>
-	<div class="container mt-5 mb-5">
-		<div class="cen logo mb-4">The Promised Neverland</div>
-		
-		<div class="row cen p-2">
-		
+		<div class="container mt-5 mb-5">
+			<div class="cen logo mb-4">The Promised Neverland</div>
 
-					<center> <img fluid src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/46951607_1931474966940443_2717859213329039360_n.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=7bc95171c73000dcb57c653d573a9b1a&oe=5C6787E8" alt="HTML5 Icon" style="width:350px;height:350px;"> </center><br />
+			<div class="row cen p-2">
 
-		
-</div>
+				<center> <img fluid src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/46951607_1931474966940443_2717859213329039360_n.jpg?_nc_cat=106&_nc_ht=scontent.fbkk12-1.fna&oh=7bc95171c73000dcb57c653d573a9b1a&oe=5C6787E8" alt="HTML5 Icon" style="width:350px;height:350px;"> </center><br />
+
+			</div>
 
 			<div class="row cen">
-			<div class="p-2">
+				<div class="p-2">
 					<center> <img src="https://scontent.fbkk8-3.fna.fbcdn.net/v/t1.0-9/47354688_1931474990273774_6389098057090203648_n.jpg?_nc_cat=100&_nc_ht=scontent.fbkk8-3.fna&oh=3bf8965e34ee6ce7fc21ebafc27a5efe&oe=5C6BBBBA" alt="HTML5 Icon" style="width:350px;height:350px;"> </center><br />
 
-</div></div>
-<div class="row cen">
+				</div>
+			</div>
+			<div class="row cen">
 				<div class="p-2">
 					<center> <img src="https://scontent.fbkk12-2.fna.fbcdn.net/v/t1.0-9/47174618_1931474993607107_4672855127340613632_n.jpg?_nc_cat=104&_nc_ht=scontent.fbkk12-2.fna&oh=d7215141f8fb0885fe7206d2a349cb96&oe=5CA6FD80" alt="HTML5 Icon" style="width:350px;height:350px;"> </center><br />
 
+				</div>
 			</div>
 		</div>
-</div>
-<div class="footer pt-3 pb-3 mt-4">Copyright © 2009-2018 Anime WebApp. All Rights Reserved.</div>
-	</div>
+		<div class="footer pt-3 pb-3 mt-4">Copyright © 2009-2018 Anime WebApp. All Rights Reserved.</div>
 	</div>
 
 </template> 
@@ -92,30 +95,30 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.footer{
+.footer {
 	background: #ffc107 !important;
-	color:#fff;
+	color: #fff;
 }
-.header{
-	color:#fffff !important;
+.header {
+	color: #fff !important;
 	font-weight: bold;
 }
 
-.font-bold{
-		font-weight: bold;
-}
-
-active{
+.font-bold {
 	font-weight: bold;
 }
 
-.headerfont{
-color:#fff;
+active {
+	font-weight: bold;
 }
-.logo{
+
+.headerfont {
+	color: #fff;
+}
+.logo {
 	color: black !important;
-font-weight: bold;
-font-size:25px;
+	font-weight: bold;
+	font-size: 25px;
 }
 h1,
 h2 {

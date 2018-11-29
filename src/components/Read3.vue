@@ -54,7 +54,6 @@
 </div>
 <div class="footer pt-3 pb-3 mt-4">Copyright © 2009-2018 Anime WebApp. All Rights Reserved.</div>
 	</div>
-	</div>
 
 </template> 
 
@@ -97,7 +96,7 @@ export default {
 	color:#fff;
 }
 .header{
-	color:#fffff !important;
+	color:#ffffff !important;
 	font-weight: bold;
 }
 
